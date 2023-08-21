@@ -1,0 +1,91 @@
+.profile-container{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 600px;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.user-details-label{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+}
+
+.user-details-label h3 span{
+    padding-right: 10px;
+  }
+.user-details-label h3{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    padding-bottom: 5px;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+.user-details {
+    display: grid;
+    padding-top: 18px;
+    padding-left: 40px;
+    border-left: 1px solid #ddd;
+   
+}
+.user-details p{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    text-transform: capitalize;
+}
+.user-details h3 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    margin-top: 0;   
+}
+
+.edit-profile{
+margin: 50px auto;
+}
+
+@media screen and (max-width:800px){
+ .profile-container{
+   margin-right: 0 50px;
+   width: 400px;
+ }
+
+}
+@media screen and (max-width:600px){
+ .profile-container{
+   margin-right: 0 50px;
+   width: 350px;
+ }
+ .user-details{
+    padding-left: 20px;
+ }
+
+}
+@media screen and (max-width:500px){
+ .profile-container{
+   margin-right: 0 20px;
+   width: 300px;
+   padding: 10px;
+ }
+ .user-details{
+    padding-left: 20px;
+ }
+
+}
+@media screen and (max-width:400px){
+ .profile-container{
+   width: 280px;
+   padding-right: 15px;
+ }
+ .user-details{
+    padding-left: 20px;
+ }
+
+}
+

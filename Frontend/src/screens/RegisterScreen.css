@@ -1,0 +1,80 @@
+.register-overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(42, 102, 152, 0.7);
+  z-index: 10;
+}
+
+.register-modal {
+  position: fixed;
+  height: 500px;
+  width: 500px;
+  border-radius: 5px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  z-index: 1001;
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+}
+
+.form-container {
+  width: 420;
+}
+
+@media screen and (max-width: 800px) {
+  .register-modal {
+    width: 350px;
+    height: 600px;
+
+  }
+
+  .form-container {
+    width: 300px;
+    height: 400px;
+    padding-bottom: 120px;
+    
+  }
+}
+@media screen and (max-width: 500px) {
+  .register-modal {
+    width: 320px;
+    height: 500px;
+  }
+
+  .form-container {
+    width: 250px;
+    max-width: 100%;
+    padding-bottom: 80px;
+  }
+  .mantine-Paper-root {
+    padding: 15px;
+  }
+  .title{
+    font-size: 24px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .register-modal {
+    width: 300px;
+    height: 420px;
+    padding-bottom: 70px;
+   
+  }
+
+  .form-container {
+    width: 300px;
+    max-width: 100%;
+  }
+  .mantine-Paper-root {
+    padding: 15px;
+  }
+  .title{
+    margin-top: 50px;
+  }
+}
