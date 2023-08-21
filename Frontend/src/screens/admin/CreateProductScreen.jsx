@@ -126,7 +126,7 @@ export function CreateProductScreen() {
         />
       )}
 
-      <form style={{ margin: "0 400px" }}>
+      <form >
         <Title
           order={2}
           size="h3"
@@ -140,7 +140,7 @@ export function CreateProductScreen() {
         <SimpleGrid
           cols={3}
           mt="xl"
-          breakpoints={[{ maxWidth: "sm", cols: 1 }]}
+          breakpoints={[{ maxWidth:600, cols: 1 }]}
         >
           <TextInput
             label="Name"
@@ -197,7 +197,7 @@ export function CreateProductScreen() {
             onChange={(e) => setSubCategory(e.target.value)}
           />
         </SimpleGrid>
-        <SimpleGrid cols={2}>
+        <SimpleGrid cols={2} breakpoints={[{maxWidth:600, cols: 1}]}>
           <Textarea
             mt="md"
             label="Sizes"
