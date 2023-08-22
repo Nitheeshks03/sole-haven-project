@@ -8,7 +8,7 @@ import productRoutes from "./routes/productRoutes.js";
 import orderRoutes from "./routes/orderRoutes.js";
 import errorHandler from "./middleware/errorMiddleware.js";
 import uploadRoutes from "./routes/uploadRoutes.js";
-import cors from "cors";
+
 
 const port = process.env.PORT || 5000;
 dotenv.config();
