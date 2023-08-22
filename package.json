@@ -7,7 +7,7 @@
     "all": "concurrently \"npm run server\" \"npm run client\"",
     "data:import": "node seeder.js",
     "data:destroy": "node seeder.js -d",
-    "build": "npm install && cd frontend && npm install && npm run build"
+    "build": "npm install && npm install --prefix frontend && npm run build --prefix frontend -- --cwd frontend"
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",
