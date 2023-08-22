@@ -1,6 +1,6 @@
 import "./ProductScreen.css";
 import SizeSelector from "../components/SizeSelector";
-import { Button, Loader, Divider } from "@mantine/core";
+import { Button, Loader, Divider, Rating } from "@mantine/core";
 import { useParams } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
 import { axiosInstance } from "../axiosInstance.js";
@@ -8,6 +8,8 @@ import { useState, useContext } from "react";
 import { CartContext } from "../contexts/CartContext";
 import { WishListContext } from "../contexts/WishListContext";
 import { notifications } from "@mantine/notifications";
+import CreateReview from '../components/CreateReview';
+
 
 function ProductScreen() {
   const { handleAddToCart } = useContext(CartContext);
@@ -34,7 +36,10 @@ function ProductScreen() {
   const price = product?.price;
   const actualPrice = price + 500;
   const discount = Math.floor(((actualPrice - price) / actualPrice) * 100);
+  const rating = product?.rating;
+  const numReview = product?.numReviews;
   return (
+    <>
     <div className="product-container">
       <div className="image-container">
         {product?.image.map((img, index) => (
@@ -49,6 +54,8 @@ function ProductScreen() {
       <div className="product-info">
         {isLoading && <Loader />}
         <h1>{product?.name}</h1>
+        <div style={{display:'flex'}}>
+       <Rating value={rating} readOnly  /><span>({numReview})</span> </div>
         <p style={{ fontSize: "16px", opacity: "0.7" }}>
           {product?.subCategory}
         </p>
@@ -82,7 +89,14 @@ function ProductScreen() {
           </Button>
         </div>
       </div>
+      
     </div>
+    <Divider mb={50} mt={50} />
+    
+    <CreateReview product={product}/>
+    
+    </>
+
   );
 }
 

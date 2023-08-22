@@ -6,16 +6,18 @@ import {
   ActionIcon,
   Menu,
   ScrollArea,
+  Loader,
 } from "@mantine/core";
 import { IconPencil, IconTrash, IconCheck } from "@tabler/icons-react";
 import { axiosInstance } from "../../axiosInstance";
 import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
 import { notifications } from "@mantine/notifications";
-
+import { useNavigate } from 'react-router-dom';
 
   
 
 export function UsersListScreen() {
+  const navigate = useNavigate();
   const screenWidth = window.innerWidth;
   let TABLE_STYLES ;
 
@@ -72,7 +74,7 @@ screenWidth >500 ? TABLE_STYLES = {marginLeft:'100px', marginRight:'100px',} : T
       <td>
         <Group spacing={0} position="right">
           <ActionIcon>
-            <IconPencil size="1rem" stroke={1.5} />
+            <IconPencil size="1rem" stroke={1.5} onClick={()=>navigate(`/admin/users/${item._id}/edit`)} />
           </ActionIcon>
           <Menu
             transitionProps={{ transition: "pop" }}
@@ -97,11 +99,14 @@ screenWidth >500 ? TABLE_STYLES = {marginLeft:'100px', marginRight:'100px',} : T
   ));
 
   return (
+    <>
+    {isLoading && <Loader variant='bars'/>}
     <ScrollArea>
       <Table verticalSpacing="md">
         <tbody>{rows}</tbody>
       </Table>
     </ScrollArea>
+    </>
   );
 }
 

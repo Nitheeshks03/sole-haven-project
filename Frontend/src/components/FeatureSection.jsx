@@ -37,9 +37,9 @@ function FeatureCard({ title, icon }) {
         <h1
           style={{
             fontFamily: "Open Sans",
-            fontSize: "24px",
+            fontSize: "22px",
             position: "absolute",
-            top: "50px",
+            top: "30px",
           }}
         >
           {title}

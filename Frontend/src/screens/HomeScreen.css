@@ -58,9 +58,23 @@
   margin-bottom: 20px;
 }
 .section-heading h1 {
-  font-family: "Exo", sans-serif;
-  font-size: 28px;
-  font-weight: 300;
+  font-family: "Montserrat", sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+}
+.section-heading span{
+  animation : headingAnim 4s infinite;
+}
+@keyframes headingAnim {
+  0% {
+    color: black;
+  }
+  50% {
+    color: rgb(127, 193, 219);
+  }
+  100% {
+    color: black;
+  }
 }
 .btn-allproducts {
   grid-row: 6;

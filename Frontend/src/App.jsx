@@ -15,7 +15,8 @@ import StepsWrapper from "./components/StepsWrapper";
 import UserOrdersListScreen from "./screens/UserOrdersListScreen";
 import OrdersListScreen from './screens/admin/OrdersListScreen';
 import UserProfileScreen from './screens/UserProfileScreen';
-import OrderDetailsScreen from './screens/OrderDetailsScreen'
+import OrderDetailsScreen from './screens/OrderDetailsScreen';
+import UserEditScreen from './screens/admin/UserEditScreen';
 import './App.css'
 
 
@@ -35,6 +36,7 @@ function App() {
           <Route path="/admin/productslist" element={<ProductListScreen />} />
           <Route path="/admin/orderslist" element={<OrdersListScreen />} />
           <Route path="/admin/products/:id/edit" element={<CreateProductScreen />} />
+          <Route path="/admin/users/:id/edit" element={<UserEditScreen />} />
           <Route path="/products/women" element={<WomenProductScreenWrapper />} />
           <Route path="/orders/myorders" element={<UserOrdersListScreen />} />
           <Route path="/orders/new" element={<OrderDetailsScreen />} />

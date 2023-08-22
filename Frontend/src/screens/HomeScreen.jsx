@@ -89,7 +89,7 @@ function HomeScreen() {
       </div>
       <Divider my="sm" />
       <div className="section-heading">
-        <h1>Hot picks</h1>
+        <h1>Top <span>Trending</span> Shoes of the Season</h1>
       </div>
       <div className="products-container">
         <div className="products">

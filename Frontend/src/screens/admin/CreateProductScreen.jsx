@@ -6,11 +6,10 @@ import {
   Title,
   Button,
   Loader,
-  FileInput,
 } from "@mantine/core";
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
+import { useQuery, useMutation } from "@tanstack/react-query";
 import { axiosInstance } from "../../axiosInstance";
 import { notifications } from "@mantine/notifications";
 import { IconCheck, IconX } from "@tabler/icons-react";
@@ -65,8 +64,12 @@ export function CreateProductScreen() {
   const uploadImageMutation = useMutation({
     mutationKey: ["uploadImage"],
     mutationFn: (formData) => axiosInstance.post("/upload", formData),
-    onSuccess: (data) => {
-      console.log(data);
+    onSuccess: () => {
+      notifications.show({
+        title: "Image Uploaded successfully",
+        color: "green",
+        autoClose: 1000,
+      })
     },
   });
 

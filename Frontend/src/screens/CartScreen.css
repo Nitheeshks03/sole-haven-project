@@ -6,7 +6,6 @@
 }
 
 .items-container {
-  grid-column: 1 / span 1;
   margin-right: 20px;
 }
 .cart-container {

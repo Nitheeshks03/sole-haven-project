@@ -15,7 +15,6 @@ import { useClickOutside, useDisclosure } from "@mantine/hooks";
 import { Link } from "react-router-dom";
 import {
   IconHeart,
-  IconShoppingCart,
   IconSearch,
   IconShoppingBag,
 } from "@tabler/icons-react";
