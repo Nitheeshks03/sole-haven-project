@@ -30,7 +30,7 @@ if (process.env.NODE_ENV === "production") {
   const __dirname = path.resolve();
   app.use(
     "/uploads",
-    express.static(path.join(__dirname, "/Frontend/public/images"))
+    express.static(path.join(__dirname, "../Frontend/public/images"))
   );
   app.use(express.static(path.join(__dirname, "/Frontend/dist")));
 
